@@ -7,12 +7,12 @@ I Posted this backend because i want to make more updates and i want you guys to
 this is my very own first custom backend and i will now share the roadmap, features (ETC...)!
 
 # ROADMAP ALSO KNOWN AS - CHANGES THAT HAS TO BE MADE
-[X] Fix loging in
-[X] Add a login system
-[X] Add an Athena file
-[X] Discord bot support
-[X] Bot-commands /create /account ETC...
-[X] DefaultGame, DefaultEngine, DefaultRuntimeOptions ETC...
+* Fix loging in
+* Add a login system
+* Add an Athena file
+* Discord bot support
+* Bot-commands /create /account ETC...
+* DefaultGame, DefaultEngine, DefaultRuntimeOptions ETC...
 * And maybe some more things but for now im focused on main parts of the backend
 
 # FEATURES IT ALREADY HAS
