@@ -1,0 +1,30 @@
+const express = require("express");
+const app = express();
+const fs = require("fs");
+
+app.use(require("./src/routes/account.js"));
+app.use(require("./src/routes/auth.js"))
+app.use(require("./src/routes/cloudstorage.js"));
+app.use(require("./src/routes/contentpages.js"));
+app.use(require("./src/routes/Datarouter.js"));
+app.use(require("./src/routes/Lightswitch.js"));
+app.use(require("./src/routes/mcp.js"));
+app.use(require("./src/routes/version.js"));
+
+app.get('/fortnite/api/storefront/v2/keychain', (req, res) => {
+    return res.status(200).send(keychain);
+})
+
+app.get('/', (req, res) => {
+    res.status(200).send({
+        status: "OK",
+        code: 200
+    })
+})
+
+const PORT = 3551;
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});
+
+module.exports = app;
