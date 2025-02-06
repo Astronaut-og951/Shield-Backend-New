@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const fs = require("fs");
 
+// IM NOT SURE IF THIS WORKS IM NEW TO JS SO I DONT REALLY KNOW IF I DID THIS RIGHT
 app.use(require("./src/routes/account.js"));
 app.use(require("./src/routes/auth.js"))
 app.use(require("./src/routes/cloudstorage.js"));
