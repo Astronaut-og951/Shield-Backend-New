@@ -27,19 +27,39 @@ app.get("/account/api/public/account", (req, res) => {
     });
 })
 
+app.post('/account/api/oauth/token', async (req, res) => {
+    res.status(200).send({
+        access_token: "eg1~lexia",
+        expires_in: 28800,
+        expires_at: "9999-12-02T01:12:01.100Z",
+        token_type: "bearer",
+        refresh_token: "eg1~lexia",
+        refresh_expires: 86400,
+        refresh_expires_at: "9999-12-02T01:12:01.100Z",
+        account_id: "lexia", // will be users account id
+        client_id: "lexia",
+        internal_client: true,
+        client_service: "lexia",
+        displayName: "lexia",
+        app: "fortnite",
+        in_app_id: "fornite",
+        device_id: "fornite"
+    });
+})
+
 app.get("/account/api/public/account/:accountId", (req, res) => {
     res.status(200).send({
         id: "fortnite",
-        displayName: "slurphosting",
-        name: "slurphosting",
-        email: "slurphosting@slurphosting.dev",
+        displayName: "lexia",
+        name: "lexia",
+        email: "lexia@lexia.dev",
         failedLoginAttempts: 0,
         lastLogin: "Timestamp",
         numberOfDisplayNameChanges: 0,
         ageGroup: "UNKNOWN",
         headless: false,
         country: "US",
-        lastName: "SlurpHosting",
+        lastName: "lexia",
         links: {},
         preferredLanguage: "en",
         canUpdateDisplayName: false,
