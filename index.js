@@ -33,10 +33,10 @@ app.use(require("./src/routes/keychain.js"));
 app.use(require("./src/routes/auth.js"))
 app.use(require("./src/routes/cloudstorage.js"));
 app.use(require("./src/routes/contentpages.js"));
-app.use(require("./src/routes/datarouter.js"));
 app.use(require("./src/routes/lightswitch.js"));
 app.use(require("./src/routes/mcp.js"));
 app.use(require("./src/routes/version.js"));
+app.use(require("./src/routes/waitingroom.js"));
 
 
 function connectDB() {
@@ -59,6 +59,7 @@ app.get('/', (req, res) => {
 
 function start() {
     app.listen(PORT, () => {
+        console.log("%cYour Text Here", "color: blue; font-size: 20px; font-weight: bold;");
         log.lexia(`Lexia is running on port: ${PORT}`);
         log.warn(`Backend is in BETA, if you find bugs report them in issues. git: https://github.com/tevahasdev/Lexia-backend/`)
     });

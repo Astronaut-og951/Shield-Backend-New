@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+
 app.post('/account/api/oauth/token', async (req, res) => {
     res.status(200).send({
         access_token: "eg1~lexia",

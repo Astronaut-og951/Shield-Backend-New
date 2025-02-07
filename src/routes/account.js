@@ -1,6 +1,14 @@
 const express = require('express');
 const app = express();
 const account = require('../db/models/account');
+
+app.post('/datarouter/api/v1/public/data', async (req, res) => {
+    res.status(200).send({
+        status: "OK",
+        code: 200
+    });
+})
+
 app.post('/fortnite/api/game/v2/tryPlayOnPlatform/account/:accountId', async (req, res) => {
     res.setHeader("Content-Type", "text/plain");
     res.status(200).send("true");
