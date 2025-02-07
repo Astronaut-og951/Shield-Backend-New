@@ -1,5 +1,7 @@
 const express = require("express");
 const app = express();
+const dotenv = require("dotenv");
+dotenv.config();
 
 app.post("/fortnite/api/game/v2/tryPlayOnPlatform/account/:accountId", (req, res) => {
     res.setHeader("Content-Type", "text/plain");
