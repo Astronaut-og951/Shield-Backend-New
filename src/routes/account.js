@@ -2,22 +2,21 @@ const express = require('express');
 const app = express();
 const account = require('../db/models/account');
 
-app.post('/datarouter/api/v1/public/data', async (req, res) => {
-    res.status(200).send({
-        status: "OK",
-        code: 200
-    });
-})
-
+app.post("/datarouter/api/v1/public/data", async (req, res) => {
+    res.status(204).end();
+});
 app.post('/fortnite/api/game/v2/tryPlayOnPlatform/account/:accountId', async (req, res) => {
     res.setHeader("Content-Type", "text/plain");
-    res.status(200).send("true");
+    res.send(true);
 })
-app.get('/account/api/public/account/:accountId/externalAuths', async (req, res) => {
-    res.status(200).send([]);
+app.get('/account/api/public/account/*/externalAuths', async (req, res) => {
+    res.json([]);
+})
+app.get('/account/api/public/account/:accountId/externalAuths"', async (req, res) => {
+    res.json([]);
 })
 app.get('/fortnite/api/game/v2/enabled_features', async (req, res) => {
-    res.status(200).send([]);
+    res.json({});
 })
 app.get('/content-controls/:accountId', async (req, res) => {
     res.status(200).send([]);

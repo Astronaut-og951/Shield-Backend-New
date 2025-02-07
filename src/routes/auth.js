@@ -39,16 +39,7 @@ app.get('/account/api/oauth/verify', async (req, res) => {
         device_id: "fornite"
     });
 })
-app.delete('/account/api/oauth/sessions/kill', async (req, res) => {
-    res.status(200).send({
-        status: "OK",
-        code: 200
-    })
-})
-app.delete('/account/api/oauth/sessions/kill/:token', async (req, res) => {
-    res.status(200).send({
-        status: "OK",
-        code: 200
-    })
+app.delete('/account/api/oauth/sessions/kill/*', async (req, res) => {
+    res.status(204).end();
 })
 module.exports = app;
