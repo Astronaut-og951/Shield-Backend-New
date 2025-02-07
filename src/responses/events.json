@@ -1,0 +1,83 @@
+{
+    "events": [
+        {
+            "gameId": "Fortnite",
+            "eventId": "LexiaEvent",
+            "regions": [
+                "EU"
+            ],
+            "regionMappings": {},
+            "platforms": [
+                "XboxOneGDK",
+                "PS4",
+                "XboxOne",
+                "XSX",
+                "Android",
+                "PS5",
+                "Switch",
+                "Windows"
+            ],
+            "platformMappings": {},
+            "displayDataId": "LexiaEvent",
+            "eventGroup": "",
+            "announcementTime": "2019-01-29T08:00:00.000Z",
+            "appId": null,
+            "environment": null,
+            "metadata": {
+                "minimumAccountLevel": 0
+            },
+            "eventWindows": [
+                {
+                    "eventWindowId": "Event_LexiaBackend1",
+                    "eventTemplateId": "Event_LexiaBackend",
+                    "countdownBeginTime": "2021-01-01T01:00:00.000Z",
+                    "beginTime": "2021-01-01T01:00:00.000Z",
+                    "endTime": "9999-01-01T01:00:00.000Z",
+                    "blackoutPeriods": [],
+                    "round": 0,
+                    "payoutDelay": 0,
+                    "isTBD": false,
+                    "canLiveSpectate": false,
+                    "scoreLocations": [],
+                    "visibility": "unlocked",
+                    "requireAllTokens": [],
+                    "requireAnyTokens": [],
+                    "requireNoneTokensCaller": [],
+                    "requireAllTokensCaller": [],
+                    "requireAnyTokensCaller": [],
+                    "additionalRequirements": [],
+                    "teammateEligibility": "all",
+                    "metadata": {
+                        "ServerReplays": true,
+                        "RoundType": "Qualifiers"
+                    }
+                }
+            ],
+            "beginTime": "2021-01-01T01:00:00.000Z",
+            "endTime": "9999-01-01T01:00:00.000Z"
+        }
+    ],
+    "player": {
+		"accountId": "1234",
+		"gameId": "Fortnite",
+		"groupIdentity": {},
+		"pendingPayouts": [],
+		"pendingPenalties": {},
+		"persistentScores": {
+			"Hype": 0
+		},
+		"teams": {},
+		"tokens": []
+	},
+    "scores": [],
+    "templates": [
+        {
+            "gameId": "Fortnite",
+            "eventTemplateId": "Event_LexiaBackend",
+            "playlistId": "Playlist_DefaultSolo",
+            "matchCap": 0,
+            "liveSessionAttributes": [],
+            "scoringRules": []
+        }
+    ]
+}
