@@ -1,0 +1,20 @@
+{
+    "_title": "Lexia",
+    "_activeDate": "2026-08-30T03:20:48.050Z",
+    "lastModified": "2026-11-01T17:33:35.346Z",
+    "_locale": "en-US",
+    "loginmessage": {
+        "_title": "WelcomeNotice",
+        "loginmessage": {
+            "_type": "CommonUI Simple Message",
+            "message": {
+                "_type": "CommonUI Simple Message Base",
+                "title": "Lexia Services",
+                "body": "This backend has been developed by Tevahas, Infinity, and the community!"
+            }
+        },
+        "_activeDate": "2026-07-19T13:14:04.490Z",
+        "lastModified": "2026-03-15T07:10:22.222Z",
+        "_locale": "en-US"
+    }
+}
