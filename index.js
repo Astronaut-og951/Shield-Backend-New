@@ -5,6 +5,28 @@ const dotenv = require("dotenv");
 dotenv.config();
 const PORT = process.env.PORT || 3551;
 
+// middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true })); 
+
+// error handling middleware
+app.use((err, req, res, next) => {
+    console.error(`Error occurred: ${err.message}`);
+    res.status(500).send({
+        status: "error",
+        message: "Something went wrong!",
+    });
+});
+
+app.use((req, res, next) => {
+    res.on('finish', () => {
+        if (res.statusCode >= 400) {
+            console.error(`Issue with request: ${req.method} ${req.url} - Status: ${res.statusCode}`);
+        }
+    });
+    next();
+});
+
 // should work
 app.use(require("./src/routes/account.js"));
 app.use(require("./src/routes/auth.js"))
