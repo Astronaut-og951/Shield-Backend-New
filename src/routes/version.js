@@ -15,10 +15,10 @@ app.get("/fortnite/api/v2/versioncheck/:version", (req, res) => {
 })
 
 app.get("/fortnite/api/calendar/v1/timeline", (req, res) => {
-    const todayAtMidnight = new Date();
-    todayAtMidnight.setHours(24, 0, 0, 0);
-    const todayOneMinuteBeforeMidnight = new Date(todayAtMidnight.getTime() - 60000);
-    const itemshopDate = todayOneMinuteBeforeMidnight.toISOString();
+    const midnight = new Date();
+    midnight.setHours(24, 0, 0, 0);
+    const somethingmidnight = new Date(midnight.getTime() - 60000);
+    const itemshopDate = somethingmidnight.toISOString();
     res.status(200).send({
         channels: {
             "client-matchmaking": {
