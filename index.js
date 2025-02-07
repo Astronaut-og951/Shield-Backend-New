@@ -1,11 +1,12 @@
 const express = require("express");
 const app = express();
 const fs = require("fs");
-const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 dotenv.config();
 const PORT = process.env.PORT || 3551;
+const mongoose = require('mongoose');
 const log = require("./src/utils/log.js");
+
 // middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); 
@@ -28,8 +29,7 @@ app.use((req, res, next) => {
     next();
 });
 
-// should work
-app.use(require("./src/routes/account.js"));
+app.use(require("./src/routes/keychain.js"));
 app.use(require("./src/routes/auth.js"))
 app.use(require("./src/routes/cloudstorage.js"));
 app.use(require("./src/routes/contentpages.js"));
@@ -38,12 +38,6 @@ app.use(require("./src/routes/Lightswitch.js"));
 app.use(require("./src/routes/mcp.js"));
 app.use(require("./src/routes/version.js"));
 
-app.get('/', (req, res) => {
-    res.status(200).send({
-        status: "OK",
-        code: 200
-    })
-})
 
 function connectDB() {
     try {
@@ -56,15 +50,21 @@ function connectDB() {
     }
 }
 
+app.get('/', (req, res) => {
+    res.status(200).send({
+        status: "OK",
+        code: 200
+    })
+})
+
 function start() {
     app.listen(PORT, () => {
         log.lexia(`Lexia is running on ${PORT} ✅`);
         log.warn(`Backend is in BETA, if you find bugs report them in issues. git: https://github.com/tevahasdev/Lexia-backend/`)
     });
     app.use(require("./src/api/api.js"));
-    log.api("Lexia initliazed api");
+    log.api("API is initliazed");
     connectDB();
-    useRoutes();
 }
 
 start();
