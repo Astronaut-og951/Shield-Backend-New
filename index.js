@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
 const fs = require("fs");
+const dotenv = require("dotenv");
+const PORT = process.env.PORT || 3551;
 
 // IM NOT SURE IF THIS WORKS IM NEW TO JS SO I DONT REALLY KNOW IF I DID THIS RIGHT
 app.use(require("./src/routes/account.js"));
@@ -19,10 +21,13 @@ app.get('/', (req, res) => {
     })
 })
 
-const PORT = 3551;
-app.listen(PORT, () => {
-    console.log(`Server is running on ${PORT} ✅`);
-    console.log(`This backend is still in BETA many issues may occur ⚠️`)
-});
+function start() {
+    app.listen(PORT, () => {
+        console.log(`Server is running on ${PORT} ✅`);
+        console.log(`This backend is still in BETA many issues may occur ⚠️`)
+    });
+    connectDB();
+}
 
+start();
 module.exports = app;
