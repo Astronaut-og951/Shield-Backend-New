@@ -1,2 +1,2 @@
-npm run index.js
+node .
 pause
