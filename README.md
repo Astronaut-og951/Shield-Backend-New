@@ -39,7 +39,7 @@ I welcome contributions, but due to past issues, contributors must be **trusted*
 
 - **Tevhas**
 - **InfinityStrike**
-- **Public**
+- **Public** | Also hevy333
 
 ## 📜 License & Usage
 
