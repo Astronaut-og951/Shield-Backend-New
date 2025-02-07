@@ -1,7 +1,13 @@
 {
+  "name": "custom-backend-main",
+  "type": "commonjs",
   "dependencies": {
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "mongoose": "^8.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tevahasdev/Lexia-backend/"
   }
 }
