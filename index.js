@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 dotenv.config();
 const PORT = process.env.PORT || 3551;
-const { log } = require("./src/utils/log.js")
+const log = require("./src/utils/log.js");
 // middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); 
