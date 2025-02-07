@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
-
+const dotenv = require("dotenv");
+dotenv.config();
 app.get("/fortnite/api/v2/versioncheck", (req, res) => {
     res.status(200).send({
         type: "NO_UPDATE"
@@ -31,8 +32,8 @@ app.get("/fortnite/api/calendar/v1/timeline", (req, res) => {
                     state: {
                         activeStorefronts: [],
                         eventNamedWeights: {},
-                        seasonNumber: 4.5,
-                        seasonTemplateId: "AthenaSeason:athenaseason4",
+                        seasonNumber: process.env.seasonNumber || 4.5,
+                        seasonTemplateId: process.env.seasonTemplateId || "AthenaSeason:athenaseason4",
                         matchXpBonusPoints: 0,
                         seasonBegin: "2020-01-01T00:00:00Z",
                         seasonEnd: "2026-01-01T00:00:00Z",
