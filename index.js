@@ -2,9 +2,10 @@ const express = require("express");
 const app = express();
 const fs = require("fs");
 const dotenv = require("dotenv");
+dotenv.config();
 const PORT = process.env.PORT || 3551;
 
-// IM NOT SURE IF THIS WORKS IM NEW TO JS SO I DONT REALLY KNOW IF I DID THIS RIGHT
+// should work
 app.use(require("./src/routes/account.js"));
 app.use(require("./src/routes/auth.js"))
 app.use(require("./src/routes/cloudstorage.js"));
