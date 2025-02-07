@@ -33,6 +33,6 @@ my-username: Tevahas.dev
 
 Just dm me and you can send me codes for the backend or possibly tell me how you want to contribuite.
 
-Thats all thanks!
+Thats all, thanks!
 
 ![SLURPHOSTING LOGO](https://www.dropbox.com/scl/fi/xr54lfwmtdj5afnz14oje/Slurp-Hosting-Banner.png?rlkey=c53bdxwt5jzf49tuplegqs7px&st=sggc3d4r&dl=1)
