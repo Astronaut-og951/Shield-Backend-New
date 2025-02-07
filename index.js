@@ -33,8 +33,8 @@ app.use(require("./src/routes/keychain.js"));
 app.use(require("./src/routes/auth.js"))
 app.use(require("./src/routes/cloudstorage.js"));
 app.use(require("./src/routes/contentpages.js"));
-app.use(require("./src/routes/Datarouter.js"));
-app.use(require("./src/routes/Lightswitch.js"));
+app.use(require("./src/routes/datarouter.js"));
+app.use(require("./src/routes/lightswitch.js"));
 app.use(require("./src/routes/mcp.js"));
 app.use(require("./src/routes/version.js"));
 
