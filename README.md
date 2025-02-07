@@ -31,9 +31,6 @@ YOU MUST BE TRUSTED BY ME AND YOU MUST PROMISE NOT TO BE SOME STUPID GUY AND MES
 Dm me if you want to help
 my-username: Tevahas.dev
 
-**Contributors:**
-  Tevhas,
-  InfinityStrike
 
 Just dm me and you can send me codes for the backend or possibly tell me how you want to contribuite.
 
