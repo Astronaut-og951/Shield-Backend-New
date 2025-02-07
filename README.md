@@ -2,7 +2,7 @@
 
 Welcome to the **Lexia Backend**! This project is open-source and a work in progress. Feel free to explore, contribute, and help improve it.
 
-![Banner](https://i.imgur.com/DC9mwsu.png)
+![Banner](https://i.imgur.com/fU5cDUq.png)
 
 ## 🚀 About This Project
 
