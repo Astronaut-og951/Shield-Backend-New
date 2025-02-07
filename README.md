@@ -7,7 +7,7 @@ I Posted this backend because i want to make more updates and i want you guys to
 this is my very own first custom backend and i will now share the roadmap, features (ETC...)!
 
 # ROADMAP ALSO KNOWN AS - CHANGES THAT HAS TO BE MADE
-* Fix loging in
+* Fix logging in
 * Add a login system
 * Add an Athena file
 * Discord bot support
