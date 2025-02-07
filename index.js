@@ -12,10 +12,6 @@ app.use(require("./src/routes/Lightswitch.js"));
 app.use(require("./src/routes/mcp.js"));
 app.use(require("./src/routes/version.js"));
 
-app.get('/fortnite/api/storefront/v2/keychain', (req, res) => {
-    return res.status(200).send(keychain);
-})
-
 app.get('/', (req, res) => {
     res.status(200).send({
         status: "OK",
