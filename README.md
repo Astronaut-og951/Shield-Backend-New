@@ -1,4 +1,4 @@
-# - SLURP HOSTING CUSTOM BACKEND!
+# SLURP HOSTING CUSTOM BACKEND!
 
 **This backend has been open sourced for everyone and before i get into deeper things about it, ITS NOT FINISHED!**
 
