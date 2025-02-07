@@ -59,7 +59,7 @@ app.get('/', (req, res) => {
 
 function start() {
     app.listen(PORT, () => {
-        log.lexia(`Lexia is running on ${PORT} ✅`);
+        log.lexia(`Lexia is running on port: ${PORT}`);
         log.warn(`Backend is in BETA, if you find bugs report them in issues. git: https://github.com/tevahasdev/Lexia-backend/`)
     });
     app.use(require("./src/api/api.js"));
