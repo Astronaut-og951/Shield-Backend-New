@@ -6,7 +6,7 @@ I Posted this backend because i want to make more updates and i want you guys to
 
 this is my very own first custom backend and i will now share the roadmap, features (ETC...)!
 
-# ROADMAP ALSO KNOWN AS - CHANGES THAT HAS TO BE MADE
+# ROADMAP
 * Fix logging in
 * Add a login system
 * Add an Athena file
@@ -15,7 +15,7 @@ this is my very own first custom backend and i will now share the roadmap, featu
 * DefaultGame, DefaultEngine, DefaultRuntimeOptions ETC...
 * And maybe some more things but for now im focused on main parts of the backend
 
-# FEATURES IT ALREADY HAS
+# FEATURES (IMPLEMENTED)
 Note: **It really has nothing ive been sitting here for an hour adding the main routes for it but you can go in lobby yet**
 [X] Getting in lobby - 50% idk really it just asks for auth and then yeah you will see :sob:
 
@@ -30,6 +30,10 @@ YOU MUST BE TRUSTED BY ME AND YOU MUST PROMISE NOT TO BE SOME STUPID GUY AND MES
 
 Dm me if you want to help
 my-username: Tevahas.dev
+
+**Contributors:**
+  Tevhas,
+  InfinityStrike
 
 Just dm me and you can send me codes for the backend or possibly tell me how you want to contribuite.
 
