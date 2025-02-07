@@ -48,3 +48,5 @@ You are free to use, modify, and improve this backend for your own projects. Whi
 ---
 
 Thanks for checking out Lexia Backend! Feel free to reach out and help improve it. 🙌
+
+![Banner](https://i.imgur.com/DC9mwsu.png)
