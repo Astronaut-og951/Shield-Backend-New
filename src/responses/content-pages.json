@@ -9,8 +9,8 @@
             "_type": "CommonUI Simple Message",
             "message": {
                 "_type": "CommonUI Simple Message Base",
-                "title": "Lexia Services",
-                "body": "This backend has been developed by Tevahas, Infinity, and the community!"
+                "title": "Lexia Backend",
+                "body": "This backend has been developed by Tevahas, Infinity, and Public!"
             }
         },
         "_activeDate": "2026-07-19T13:14:04.490Z",
