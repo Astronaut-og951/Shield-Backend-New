@@ -51,15 +51,11 @@ function connectDB() {
 }
 
 app.get('/', (req, res) => {
-    res.status(200).send({
-        status: "OK",
-        code: 200
-    })
+    "<h1>Lexia Backend</h1>"
 })
 
 function start() {
     app.listen(PORT, () => {
-        console.log("%cYour Text Here", "color: blue; font-size: 20px; font-weight: bold;");
         log.lexia(`Lexia is running on port: ${PORT}`);
         log.warn(`Backend is in BETA, if you find bugs report them in issues. git: https://github.com/tevahasdev/Lexia-backend/`)
     });
