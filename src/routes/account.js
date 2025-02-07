@@ -1,7 +1,33 @@
 const express = require("express");
 const app = express();
+const dotenv = require("dotenv");
+dotenv.config();
 
-app.get("/account", (req, res) => {
+app.post("/fortnite/api/game/v2/tryPlayOnPlatform/account/:accountId", (req, res) => {
+    res.setHeader("Content-Type", "text/plain");
+    res.status(200).send("true");
+})
+app.get("/account/api/public/account/:accountId/externalAuths", (req, res) => {
+    res.status(200).send([]);
+})
+
+app.get("/fortnite/api/game/v2/enabled_features", (req, res) => {
+    res.status(200).send([]);
+})
+
+app.get("/content-controls/:accountId", (req, res) => {
+    res.status(200).send([]);
+})
+
+app.get("/account/api/public/account", (req, res) => {
+    res.status(200).send({
+        id: "fortnite",
+        displayName: "fortnite",
+        externalAuth: {}
+    });
+})
+
+app.get("/account/api/public/account/:accountId", (req, res) => {
     res.status(200).send({
         id: "fortnite",
         displayName: "slurphosting",
@@ -25,11 +51,25 @@ app.get("/account", (req, res) => {
     });
 });
 
-app.get("/status", (req, res) => {
+app.post("/api/v1/user/setting", (req, res) => {
     res.status(200).send({
         status: "OK",
-        code: 200,
+        code: 200
     });
+})
+
+
+app.get("/socialban/api/public/v1/:accountId", (req, res) => {
+    res.status(200).send([]);
 });
+
+app.get("/presence/api/v1/_/:accountId/settings/subscriptions", (req, res) => {
+    res.status(200).send([]);
+});
+
+app.get("/fortnite/api/game/v2/privacy/account/:accountId", (req, res) => {
+    res.status(200).send([]);
+});
+
 
 module.exports = app;
