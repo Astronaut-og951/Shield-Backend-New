@@ -2,6 +2,8 @@
 
 Welcome to the **Lexia Backend**! This project is open-source and a work in progress. Feel free to explore, contribute, and help improve it.
 
+![Banner](https://i.imgur.com/DC9mwsu.png)
+
 ## 🚀 About This Project
 
 This is my first fully custom backend, and while it is not yet complete, I am actively working on improvements. The main purpose of releasing this backend is to allow others to use it, provide feedback, and contribute to its development.
@@ -49,4 +51,3 @@ You are free to use, modify, and improve this backend for your own projects. Whi
 
 Thanks for checking out Lexia Backend! Feel free to reach out and help improve it. 🙌
 
-![Banner](https://i.imgur.com/DC9mwsu.png)
