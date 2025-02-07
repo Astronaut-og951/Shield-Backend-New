@@ -8,16 +8,16 @@ dotenv.config();
 const authkey = process.env.AUTHKEY;
 
 app.get("/lexia/api/login", async (req, res) => {
-    const { email, password, authkey } = req.query;
-    if (authkey !== authkey) return res.status(401).send({ error: "invalid authkey" });
+    const { email, password } = req.query;
     try {
+        
         if (!email) return res.status(400).send({ error: "Email is required" });
         if (!password) return res.status(400).send({ error: "Password is required" });
     
         const user = await account.findOne({ email }).lean();
         if (!user) return res.status(400).send({ error: "Account not found." });
     
-        res.json(200).send({
+        res.status(200).json({
             success: true,
             email: email,
             password: password,
