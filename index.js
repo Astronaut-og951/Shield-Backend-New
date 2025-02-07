@@ -58,11 +58,13 @@ function connectDB() {
 
 function start() {
     app.listen(PORT, () => {
-        console.log(`Server is running on ${PORT} ✅`);
-        console.log(`This backend is still in BETA many issues may occur ⚠️`)
-        app.use(require("./src/api/api.js"));
+        log.lexia(`Server is running on ${PORT} ✅`);
+        log.warn(`This backend is still in BETA many issues may occur ⚠️`)
     });
+    app.use(require("./src/api/api.js"));
+    log.api("API is initliazed");
     connectDB();
+    useRoutes();
 }
 
 start();
