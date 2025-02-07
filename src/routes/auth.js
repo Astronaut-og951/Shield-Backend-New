@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 
-app.get("/auth", (req, res) => {
+app.get("/account/api/oauth/token", (req, res) => {
 res.status(200).send({
     access_token: "eg1~fortnite",
     expires_in: 28800,
