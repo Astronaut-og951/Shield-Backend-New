@@ -1,5 +1,7 @@
 const express = require("express");
 const app = express();
+const dotenv = require("dotenv");
+dotenv.config();
 
 app.get("/lightswitch/api/service/Fortnite/status", (req, res) => {
     res.status(200).send({
