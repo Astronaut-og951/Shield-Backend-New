@@ -1,39 +1,49 @@
-# LEXIA BACKEND!
+# LEXIA BACKEND
 
-**This backend has been open sourced for everyone and before i get into deeper things about it, ITS NOT FINISHED!**
+Welcome to the **Lexia Backend**! This project is open-source and a work in progress. Feel free to explore, contribute, and help improve it.
 
-I Posted this backend because i want to make more updates and i want you guys to use it maybe
+## 🚀 About This Project
 
-this is my very own first custom backend and i will now share the roadmap, features (ETC...)!
+This is my first fully custom backend, and while it is not yet complete, I am actively working on improvements. The main purpose of releasing this backend is to allow others to use it, provide feedback, and contribute to its development.
 
-# ROADMAP
-* Fix logging in
-* Add a login system
-* Add an Athena file
-* Discord bot support
-* Bot-commands /create /account ETC...
-* DefaultGame, DefaultEngine, DefaultRuntimeOptions ETC...
-* And maybe some more things but for now im focused on main parts of the backend
+## 📌 Roadmap
 
-# FEATURES (IMPLEMENTED)
-Note: **It really has nothing ive been sitting here for an hour adding the main routes for it but you can go in lobby yet**
-[X] Getting in lobby - 50% idk really it just asks for auth and then yeah you will see :sob:
+### Upcoming Features & Fixes:
 
-**Getting in lobby is the only thing it has im pretty sure i cant remember but you can check it yourself**
+- Tournaments
+- Account Creation
+- ContentPages - News and all that
+- ItemShop's - With Bundles
 
-***Again if you want you can take this backend (People say its skidding but i dont mind) you can fix it and make it for your project***
+And lots more
 
-Many people know me as a skidder from the past because im known for skidding momentum eon and all that but that was in the past im now really good at C# And also im learning JS and backend as you can see by this
+## ✅ Current Features
 
-feel free to help me by dming me on discord and we can contribuite to this backend
-YOU MUST BE TRUSTED BY ME AND YOU MUST PROMISE NOT TO BE SOME STUPID GUY AND MESS IT UP
+⚠ **Note:** The backend is still in early development, so functionality is limited.
 
-Dm me if you want to help
-my-username: Tevahas.dev
+- **Lobby Access** *(50% Complete)* – Requires authentication to enter.
+- **Authentication** *(85% Complete)* - Requires commands now.
+- **MongoDB** *(100% Complete)* - Requires nothing more unless you want to mod it and make it better
 
+These are all of our features for now, We will add lots more as days and hours go by.
 
-Just dm me and you can send me codes for the backend or possibly tell me how you want to contribuite.
+## 🤝 Contributions
 
-Thats all, thanks!
+I welcome contributions, but due to past issues, contributors must be **trusted**. If you’re interested in helping, please DM me on Discord and let me know how you’d like to contribute.
 
-![SLURPHOSTING LOGO](https://www.dropbox.com/scl/fi/xr54lfwmtdj5afnz14oje/Slurp-Hosting-Banner.png?rlkey=c53bdxwt5jzf49tuplegqs7px&st=sggc3d4r&dl=1)
+### Contact:
+
+**Discord:** `Tevahas.dev`
+
+### Contributor(s):
+
+- **Tevhas**
+- **InfinityStrike**
+
+## 📜 License & Usage
+
+You are free to use, modify, and improve this backend for your own projects. While some might consider it “skidding,” I don’t mind—just make sure to give proper credit and contribute back if possible!
+
+---
+
+Thanks for checking out Lexia Backend! Feel free to reach out and help improve it. 🙌
