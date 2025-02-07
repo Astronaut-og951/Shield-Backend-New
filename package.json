@@ -1,5 +1,5 @@
 {
-  "name": "custom-backend-main",
+  "name": "lexia-backend-main",
   "type": "commonjs",
   "dependencies": {
     "dotenv": "^16.4.7",
