@@ -25,7 +25,8 @@ app.get('/', (req, res) => {
 
 const PORT = 3551;
 app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+    console.log(`Server is running on ${PORT} ✅`);
+    console.log(`This backend is still in BETA many issues may occur ⚠️`)
 });
 
 module.exports = app;
