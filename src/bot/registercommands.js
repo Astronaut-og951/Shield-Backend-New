@@ -39,12 +39,12 @@ function registercommands() {
 
     (async () => {
         try {
-            log.info(`Started refreshing ${commands.length} application (/) commands.`);
+            log.lexia(`Started refreshing ${commands.length} application (/) commands.`);
             const data = await rest.put(
                 Routes.applicationGuildCommands(process.env.CLIENT_ID, process.env.GUILD_ID),
                 { body: commands },
             );
-            log.info(`Successfully reloaded ${data.length} application (/) commands.`);
+            log.lexia(`Successfully reloaded ${data.length} application (/) commands.`);
         } catch (error) {
             console.error(error);
         }

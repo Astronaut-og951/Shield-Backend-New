@@ -11,6 +11,10 @@ class log {
       console.log(`\x1b[33m[WARN]\x1b[0m ${message}`); 
     }
   
+    static info(message) {
+      console.log(`\x1b[33m[INFO]\x1b[0m ${message}`); 
+    }
+
     static error(message) {
       console.log(`\x1b[31;1m[ERROR]\x1b[0m ${message}`); 
     }
