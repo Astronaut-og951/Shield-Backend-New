@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const profile = require("../db/models/profile");
+const Profile = require("../db/models/profile");
 
 async function CreateProfile(accountId) {
     const athena = fs.readFileSync(
@@ -48,8 +48,8 @@ async function CreateProfile(accountId) {
       "utf8"
     );
   
-    await profile.create({
-      created: new Date(),
+    await Profile.create({
+      created: new Date.now(),
       accountId,
       athena,
       campaign,
