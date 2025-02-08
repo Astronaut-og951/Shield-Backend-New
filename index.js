@@ -29,6 +29,12 @@ app.use((req, res, next) => {
     next();
 });
 
+// incoming requests
+app.use((req, res, next) => {
+    console.log(`Incoming request: ${req.method} ${req.url}`);
+    next();
+});
+
 app.use(require("./src/routes/keychain.js"));
 app.use(require("./src/routes/auth.js"))
 app.use(require("./src/routes/cloudstorage.js"));
