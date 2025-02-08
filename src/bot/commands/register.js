@@ -20,7 +20,7 @@ module.exports = {
 	        .setColor(0x0099FF)
 	        .setTitle('Welcome to Lexia,', + username + '!')
 	        .setAuthor({ name: 'Lexia Backend', iconURL: 'https://i.imgur.com/YOXl1by.png', url: 'https://github.com/tevahasdev/Lexia-backend/' })
-	        .setDescription('Some description here')
+	        .setDescription('This backend is in beta, if you find any bugs please report them in the issues section of the github page.')
 	        .addFields(
 		        { name: 'Username', value: username },
 		        { name: 'email', value: email, inline: true },
