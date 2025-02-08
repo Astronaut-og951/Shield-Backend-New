@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const accountschema = new mongoose.Schema(
+const profileschema = new mongoose.Schema(
     {
         created: { type: Date, required: true },
         accountId: { type: String, required: true, unique: true },
@@ -22,5 +22,5 @@ const accountschema = new mongoose.Schema(
     }
 )
 
-const model = mongoose.model('AccountSchema', accountschema);
+const model = mongoose.model('ProfileSchema', profileschema);
 module.exports = model;
