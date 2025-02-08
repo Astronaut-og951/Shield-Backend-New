@@ -65,7 +65,11 @@ function start() {
         log.lexia(`Lexia is running on port: ${PORT}`);
         log.warn(`Backend is in BETA, if you find bugs report them in issues. git: https://github.com/tevahasdev/Lexia-backend/`)
     });
-    require("./src/bot/bot.js");
+    if (process.env.DISABLE_BOT === "true") {
+        log.lexia("Bot is disabled to enable it please change it to true in the .env");
+    } else {
+        require("./src/bot/bot.js");
+    }
     require("./src/api/api.js");
     log.api("API is initliazed");
     connectDB();
