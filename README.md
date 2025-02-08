@@ -1,3 +1,4 @@
+![Banner](https://i.imgur.com/fU5cDUq.png)
 # LEXIA BACKEND
 
 Welcome to the **Lexia Backend**! This project is open-source and a work in progress. Feel free to explore, contribute, and help improve it.
@@ -48,3 +49,4 @@ You are free to use, modify, and improve this backend for your own projects. Whi
 ---
 
 Thanks for checking out Lexia Backend! Feel free to reach out and help improve it. 🙌
+
