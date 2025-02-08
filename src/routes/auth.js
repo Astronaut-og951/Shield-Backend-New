@@ -3,6 +3,8 @@ const app = express();
 const dotenv = require("dotenv");
 dotenv.config();
 
+app.use(express.json()); 
+
 app.post("/account/api/oauth/token", (req, res) => {
     res.status(200).send({
         access_token: "eg1~fortnite",
@@ -22,7 +24,6 @@ app.post("/account/api/oauth/token", (req, res) => {
         device_id: "fortnite"
     });
 });
-
 app.post("/account/api/oauth/verify", (req, res) => {
     res.status(200).send({
         access_token: "eg1~fortnite",
@@ -42,8 +43,6 @@ app.post("/account/api/oauth/verify", (req, res) => {
         device_id: "fortnite"
     });
 });
-
-
 app.delete("/account/api/oauth/sessions/kill", (req, res) => {
     res.status(200).send({
         status: "OK",
@@ -55,8 +54,16 @@ app.delete("/account/api/oauth/sessions/kill/:token", (req, res) => {
     res.status(200).send({
         status: "OK",
         code: 200
-    })
+    });
 });
+
+app.post("/datarouter/api/v1/public/data", (req, res) => {
+    res.status(200).send({ status: "success" });
+});
+app.get("/account/api/public/account/fortnite/externalAuths", (req, res) => {
+    res.status(200).send([]);
+});
+
 
 
 module.exports = app;
