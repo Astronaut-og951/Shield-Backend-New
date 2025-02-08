@@ -6,7 +6,7 @@ const friendsschema = new mongoose.Schema(
         accountId: { type: String, required: true, unique: true },
     },
     {
-        collection: "users"
+        collection: "friends"
     }
 )
 

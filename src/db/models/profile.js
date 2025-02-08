@@ -18,7 +18,7 @@ const profileschema = new mongoose.Schema(
         theater0: {type: Object, required: true},
     },
     {
-        collection: "users"
+        collection: "profile"
     }
 )
 

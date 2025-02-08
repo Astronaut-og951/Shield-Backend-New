@@ -45,7 +45,6 @@ app.use(require("./src/routes/mcp.js"));
 app.use(require("./src/routes/version.js"));
 app.use(require("./src/routes/waitingroom.js"));
 
-
 function connectDB() {
     try {
         mongoose.set("strictQuery", true);
@@ -66,11 +65,10 @@ function start() {
         log.lexia(`Lexia is running on port: ${PORT}`);
         log.warn(`Backend is in BETA, if you find bugs report them in issues. git: https://github.com/tevahasdev/Lexia-backend/`)
     });
-    app.use(require("./src/bot/bot.js"));
-    app.use(require("./src/api/api.js"));
+    require("./src/bot/bot.js");
+    require("./src/api/api.js");
     log.api("API is initliazed");
     connectDB();
 }
 
 start();
-module.exports = app;
