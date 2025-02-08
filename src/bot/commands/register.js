@@ -15,6 +15,6 @@ module.exports = {
         const discordId = interaction.user.id;
         
         functions.createAccount(username, email, password, discordId);
-		await interaction.reply('register!');
+	await interaction.reply({ content: 'Successfully created your account!', flags: MessageFlags.Ephemeral });
 	},
 };
