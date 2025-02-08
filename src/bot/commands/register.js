@@ -18,7 +18,7 @@ module.exports = {
         functions.createAccount(username, email, password, discordId);
         const embed = new EmbedBuilder()
 	        .setColor(0x0099FF)
-	        .setTitle('An Account was created!')
+	        .setTitle('Welcome to Lexia,', + username + '!')
 	        .setAuthor({ name: 'Lexia Backend', iconURL: 'https://i.imgur.com/YOXl1by.png', url: 'https://github.com/tevahasdev/Lexia-backend/' })
 	        .setDescription('Some description here')
 	        .addFields(
@@ -27,7 +27,6 @@ module.exports = {
 	        )
 	        .setTimestamp()
 	        .setFooter({ text: 'Lexia Backend', iconURL: 'https://i.imgur.com/YOXl1by.png' });
-
 
 	    await interaction.reply({ content: 'Successfully created your account!', embeds: [embed] });
 	},
