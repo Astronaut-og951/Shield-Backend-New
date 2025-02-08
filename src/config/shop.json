@@ -1,0 +1,25 @@
+{
+    "//": "Lexia ItemShop",
+
+    "//": "These are the itemshop items feel free to change them by using https://fortnite.gg",
+
+    "daily1": { "itemGrants": ["AthenaDance:EID_Floss"], "price": 500 },
+
+    "daily2": { "itemGrants": ["AthenaCharacter:CID_044_Athena_Commando_F_SciPop"], "price": 1200 },
+
+    "daily3": { "itemGrants": ["AthenaCharacter:CID_075_Athena_Commando_F_Stripe"], "price": 800 },
+
+    "daily4": { "itemGrants": ["AthenaDance:EID_Fresh"], "price": 500 },
+
+    "daily5": { "itemGrants": ["AthenaPickaxe:Pickaxe_ID_015_HolidayCandyCane"], "price": 1500 },
+
+    "daily6": { "itemGrants": ["AthenaGlider:Glider_Warthog"], "price": 500 },
+
+    "featured1": { "itemGrants": ["AthenaCharacter:CID_052_Athena_Commando_F_PSBlue"], "price": 1500 },
+
+    "featured2": { "itemGrants": ["AthenaDance:EID_Worm"], "price": 0 },
+
+    "featured3": { "itemGrants": ["AthenaBackpack:BID_023_Pinkbear"], "price": 500 },
+
+    "featured4": { "itemGrants": ["AthenaGlider:Glider_ID_013_PSBlue"], "price": 0 }
+}
