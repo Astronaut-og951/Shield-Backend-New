@@ -1,15 +1,15 @@
 const { REST, Routes } = require('discord.js');
 const fs = require('node:fs');
 const path = require('node:path');
-const dotenv = require("dotenv");
-const log = require("../utils/log/log.js");
+const dotenv = require('dotenv');
+const log = require('../utils/log/log.js');
 dotenv.config();
 
-function registercommands() {
+function registerCommands() {
     const commands = [];
-    const commandFolders = fs.readdirSync("./commands/");
+    const commandFolders = fs.readdirSync('./commands/');
     for (const folder of commandFolders) {
-        const commandsPath = path.join(foldersPath, folder);
+        const commandsPath = path.join('./commands/', folder); 
         const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
         for (const file of commandFiles) {
             const filePath = path.join(commandsPath, file);
@@ -21,22 +21,23 @@ function registercommands() {
             }
         }
     }
-    
-    const rest = new REST().setToken(process.env.TOKEN);
-    
+
+    const rest = new REST({ version: '9' }).setToken(process.env.TOKEN);
+
     (async () => {
         try {
-            log.lexia(`Started refreshing ${commands.length} application (/) commands.`);
-    
+            log.info(`Started refreshing ${commands.length} application (/) commands.`);
+
             const data = await rest.put(
-                Routes.applicationGuildCommands(clientId, guildId),
+                Routes.applicationGuildCommands(process.env.CLIENT_ID, process.env.GUILD_ID),  // Fix this line
                 { body: commands },
             );
-    
-            log.lexia(`Successfully reloaded ${data.length} application (/) commands.`);
+
+            log.info(`Successfully reloaded ${data.length} application (/) commands.`);
         } catch (error) {
             console.error(error);
         }
     })();
 }
-module.exports = { registercommands };
+
+module.exports = { registerCommands };
