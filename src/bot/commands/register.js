@@ -16,6 +16,19 @@ module.exports = {
         const discordId = interaction.user.id;
         
         functions.createAccount(username, email, password, discordId);
-	await interaction.reply({ content: 'Successfully created your account!' });
+        const embed = new EmbedBuilder()
+	        .setColor(0x0099FF)
+	        .setTitle('An Account was created!')
+	        .setAuthor({ name: 'Lexia Backend', iconURL: 'https://i.imgur.com/YOXl1by.png', url: 'https://github.com/tevahasdev/Lexia-backend/' })
+	        .setDescription('Some description here')
+	        .addFields(
+		        { name: 'Username', value: username },
+		        { name: 'email', value: email, inline: true },
+	        )
+	        .setTimestamp()
+	        .setFooter({ text: 'Lexia Backend', iconURL: 'https://i.imgur.com/YOXl1by.png' });
+
+
+	    await interaction.reply({ content: 'Successfully created your account!', embeds: [embed] });
 	},
 };
