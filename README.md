@@ -1,5 +1,6 @@
 ![Banner](https://i.imgur.com/fU5cDUq.png)
 # LEXIA BACKEND
+[Discord Server](https://discord.gg/2BjBcn9Fpd)
 
 Welcome to the **Lexia Backend**! This project is open-source and a work in progress. Feel free to explore, contribute, and help improve it.
 
