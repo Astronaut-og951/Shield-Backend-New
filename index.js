@@ -5,7 +5,8 @@ const dotenv = require("dotenv");
 dotenv.config();
 const PORT = process.env.PORT || env.PORT; // 3551
 const mongoose = require('mongoose');
-const log = require("./src/utils/log.js");
+const log = require("./src/utils/log/log.js");
+const bot = require("./src/bot/bot.js");
 
 // middleware
 app.use(express.json());
@@ -65,6 +66,7 @@ function start() {
         log.lexia(`Lexia is running on port: ${PORT}`);
         log.warn(`Backend is in BETA, if you find bugs report them in issues. git: https://github.com/tevahasdev/Lexia-backend/`)
     });
+    app.use(bot);
     app.use(require("./src/api/api.js"));
     log.api("API is initliazed");
     connectDB();

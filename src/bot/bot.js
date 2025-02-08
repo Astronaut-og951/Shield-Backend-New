@@ -5,8 +5,6 @@ const dotenv = require("dotenv");
 const log = require("../utils/log.js");
 dotenv.config();
 
-
-
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
 client.once(Events.ClientReady, readyClient => {
