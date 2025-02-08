@@ -19,6 +19,21 @@ class functions {
         await CreateProfile(accountId);
         //await CreateFriends(accountId); unfinished
     }
+    static async createAccountWeb(username, email, password) {
+        const accountId = crypto.randomUUID();
+        await Account.create({
+            created: new Date.now(),
+            banned: false,
+            discordId: null,
+            accountId,
+            username,
+            username_lower: username.toLowerCase(),
+            email,
+            password,
+        });
+        await CreateProfile(accountId);
+        //await CreateFriends(accountId); unfinished
+    }
 }
   
 module.exports = functions;
