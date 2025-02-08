@@ -4,12 +4,6 @@ const dotenv = require("dotenv");
 dotenv.config();
 app.use(express.json()); 
 
-
-app.use((req, res, next) => {
-    console.log(`Incoming request: ${req.method} ${req.url}`);
-    next();
-});
-
 app.post("/account/api/oauth/token", (req, res) => {
     res.status(200).send({
         access_token: "eg1~fortnite",
