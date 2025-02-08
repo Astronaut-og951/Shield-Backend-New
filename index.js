@@ -49,9 +49,9 @@ function connectDB() {
     try {
         mongoose.set("strictQuery", true);
         mongoose.connect(process.env.DB_URL);
-        console.log("[Mongoose] Connected");
+       log.mongodb("[Mongoose] Connected");
     } catch (err) {
-        console.log(`[Mongoose] Failed -> ${err}`);
+        log.mongodb(`[Mongoose] Failed -> ${err}`);
         process.exit(1);
     }
 }

@@ -18,6 +18,9 @@ class log {
     static api(message) {
       console.log(`\x1b[32m[API]\x1b[0m ${message}`); 
     }
+    static mongodb(message) {
+      console.log(`\x1b[32m[MONGODB]\x1b[0m ${message}`); 
+    }
 }
   
 module.exports = log;
