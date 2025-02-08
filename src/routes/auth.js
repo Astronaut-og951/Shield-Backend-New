@@ -51,14 +51,15 @@ app.delete("/account/api/oauth/sessions/kill/:token", (req, res) => {
 });
 app.get("/account/api/public/account", (req, res) => {
     const accountId = req.query.accountId;
-    if (accountId === "fortnite") {
+    try {
+        if (!accountId) return res.status(400).send({ error: "Account ID is required" });
         res.status(200).send({
             id: "fortnite",
             displayName: "lexia",
             email: "lexia@services.com"
         });
-    } else {
-        res.status(404).send({ error: "Account not found" });
+    } catch {
+        res.status(400).send({ error: "IDK ERRORED." });
     }
 });
 app.get("/account/api/public/account/fortnite", (req, res) => {
