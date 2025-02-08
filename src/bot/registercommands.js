@@ -5,11 +5,12 @@ const dotenv = require('dotenv');
 const log = require('../utils/log/log.js');
 dotenv.config();
 
-function registerCommands() {
+function registercommands() {
     const commands = [];
-    const commandFolders = fs.readdirSync('./commands/');
+    const commandsFolderPath = path.join(__dirname, 'commands');
+    const commandFolders = fs.readdirSync(commandsFolderPath);
     for (const folder of commandFolders) {
-        const commandsPath = path.join('./commands/', folder); 
+        const commandsPath = path.join(commandsFolderPath, folder);
         const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
         for (const file of commandFiles) {
             const filePath = path.join(commandsPath, file);
@@ -29,7 +30,7 @@ function registerCommands() {
             log.info(`Started refreshing ${commands.length} application (/) commands.`);
 
             const data = await rest.put(
-                Routes.applicationGuildCommands(process.env.CLIENT_ID, process.env.GUILD_ID),  // Fix this line
+                Routes.applicationGuildCommands(process.env.CLIENT_ID, process.env.GUILD_ID),
                 { body: commands },
             );
 
@@ -40,4 +41,4 @@ function registerCommands() {
     })();
 }
 
-module.exports = { registerCommands };
+module.exports = { registercommands };
