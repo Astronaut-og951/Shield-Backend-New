@@ -27,7 +27,7 @@ module.exports = {
 	        )
 	        .setTimestamp()
 	        .setFooter({ text: 'Lexia Backend', iconURL: 'https://i.imgur.com/YOXl1by.png' });
-		
-	   	await interaction.reply({ content: 'Successfully created your account!', embeds: [embed] });
+
+	    await interaction.reply({ content: 'Successfully created your account!', embeds: [embed] });
 	},
 };
