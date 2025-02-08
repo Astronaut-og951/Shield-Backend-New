@@ -19,6 +19,7 @@ app.get("/lexia/api/login", async (req, res) => {
     
         res.status(200).json({
             success: true,
+            username: user.username,
             email: email,
             password: password,
         });
