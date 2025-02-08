@@ -2,6 +2,7 @@
   "name": "lexia-backend-main",
   "type": "commonjs",
   "dependencies": {
+    "discord.js": "^14.17.3",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "mongoose": "^8.10.0"
