@@ -9,7 +9,7 @@
             "_type": "CommonUI Simple Message",
             "message": {
                 "_type": "CommonUI Simple Message Base",
-                "body": "This backend has been developed by Tevahas, Infinity, and the community! github repo: github.com/tevahasdev/Lexia-backend"
+                "body": "This backend has been developed by Tevahas, Public, Infinity, Nade and the community! github repo: github.com/tevahasdev/Lexia-backend"
             }
         },
         "_activeDate": "2026-07-19T13:14:04.490Z",
@@ -24,7 +24,7 @@
               "hidden": false,
               "_type": "CommonUI Simple Message Base",
               "title": "Lexia Backend!",
-              "body": "This backend has been developed by Tevahas, Infinity, and the community! github repo: https://github.com/tevahasdev/Lexia-backend",
+              "body": "This backend has been developed by Tevahas, Public, Infinity, Nade and the community! github repo: github.com/tevahasdev/Lexia-backend"
               "spotlight": true
             }
           ]
