@@ -42,6 +42,7 @@ I welcome contributions, but due to past issues, contributors must be **trusted*
 - **Tevhas**
 - **InfinityStrike**
 - **Public** | Also hevy333
+- **Nade**
 
 ## 📜 License & Usage
 
