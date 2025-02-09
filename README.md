@@ -9,8 +9,7 @@ Welcome to the **Lexia Backend**! This project is open-source and a work in prog
 This is my first fully custom backend, and while it is not yet complete, I am actively working on improvements. The main purpose of releasing this backend is to allow others to use it, provide feedback, and contribute to its development.
 
 # Supported Seasons
-[-] Chapter 1 Season 1
-[-] Chapter 1 Season 2
+- None
 
 ## 📌 Roadmap
 
