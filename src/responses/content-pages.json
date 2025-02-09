@@ -24,7 +24,7 @@
               "hidden": false,
               "_type": "CommonUI Simple Message Base",
               "title": "Lexia Backend!",
-              "body": "This backend has been developed by Tevahas, Public, Infinity, Nade and the community! github repo: github.com/tevahasdev/Lexia-backend"
+              "body": "This backend has been developed by Tevahas, Public, Infinity, Nade and the community! github repo: github.com/tevahasdev/Lexia-backend",
               "spotlight": true
             }
           ]
@@ -57,11 +57,5 @@
         "_activeDate": "2019-08-21T15:59:59.342Z",
         "lastModified": "2019-10-29T13:07:27.936Z",
         "_locale": "en-US"
-      },
-        "_noIndex": false,
-        "_activeDate": "2022-12-01T23:45:00.000Z",
-        "lastModified": "2022-12-01T21:50:44.089Z",
-        "_locale": "en-US",
-        "_templateName": "FortniteGameShopSections"
+      }
     }
-}
