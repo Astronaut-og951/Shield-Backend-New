@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // error handling middleware
 app.use((err, req, res, next) => {
-    console.error(`Error occurred: ${err.message}`);
+    log.error(`Error occurred: ${err.message}`);
     res.status(500).send({
         status: "error",
         message: "Something went wrong!",
@@ -24,7 +24,7 @@ app.use((err, req, res, next) => {
 app.use((req, res, next) => {
     res.on('finish', () => {
         if (res.statusCode >= 400) {
-            console.error(`Issue with request: ${req.method} ${req.url} - Status: ${res.statusCode}`);
+            log.error(`Issue with request: ${req.method} ${req.url} - Status: ${res.statusCode}`);
         }
     });
     next();
@@ -32,7 +32,7 @@ app.use((req, res, next) => {
 
 // incoming requests
 app.use((req, res, next) => {
-    console.log(`Incoming request: ${req.method} ${req.url}`);
+    log.debug(`Incoming request: ${req.method} ${req.url}`);
     next();
 });
 
