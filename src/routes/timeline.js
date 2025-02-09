@@ -1,10 +1,18 @@
 const express = require("express");
 const app = express.Router();
 const functions = require("../structs/functions.js");
-// hmmmmm should this work so easy by the way
-app.get("/fortnite/api/calendar/v1/timeline", (req, res) => {
-    const memory = functions.GetVersionInfo(req);
+const dotenv = require("dotenv");
+require("dotenv").config(); // think this is scuffed??? idk i dont use commonjs - nade
 
+app.get("/fortnite/api/calendar/v1/timeline", (req, res) => {
+    const midnight = new Date();
+    midnight.setHours(24, 0, 0, 0);
+    const somethingmidnight = new Date(midnight.getTime() - 60000);
+    const itemshopDate = somethingmidnight.toISOString();
+
+    let build = process.env.seasonNumber;
+    let season = Number(build.split(".")[0])
+    
     const generateEvent = (eventType) => ({
         eventType,
         activeUntil: "2026-12-31T23:59:59.999Z",
@@ -12,8 +20,8 @@ app.get("/fortnite/api/calendar/v1/timeline", (req, res) => {
     });
 
     let activeEvents = [
-        generateEvent(`EventFlag.Season${memory.season}`),
-        generateEvent(`EventFlag.${memory.lobby}`),
+        generateEvent(`EventFlag.Season${season}`),
+        generateEvent(`EventFlag.LobbySeason${season}`),
         generateEvent("EventFlag.SpecialEvent")
     ];
 
@@ -31,24 +39,24 @@ app.get("/fortnite/api/calendar/v1/timeline", (req, res) => {
                         state: {
                             activeStorefronts: ["FeaturedStore", "DailyStore"],
                             eventNamedWeights: { "athenaseason4": 4.5 },
-                            seasonNumber: memory.season,
-                            seasonTemplateId: `AthenaSeason:athenaseason${memory.season}`,
+                            seasonNumber: process.env.seasonNumber,
+                            seasonTemplateId: process.env.seasonTemplateId,
                             matchXpBonusPoints: 0,
                             seasonBegin: "2020-01-01T00:00:00Z",
                             seasonEnd: "2026-12-31T23:59:59.999Z",
                             seasonDisplayedEnd: "2026-12-31T23:59:59.999Z",
-                            weeklyStoreEnd: "2026-12-31T23:59:59.999Z",
+                            weeklyStoreEnd: itemshopDate,
                             stwEventStoreEnd: "2026-12-31T23:59:59.999Z",
                             stwWeeklyStoreEnd: "2026-12-31T23:59:59.999Z",
                             sectionStoreEnds: {
-                                Featured: "2026-12-31T23:59:59.999Z",
-                                LimitedTime: "2026-12-31T23:59:59.999Z"
+                                Featured: itemshopDate,
+                                LimitedTime: itemshopDate
                             },
-                            dailyStoreEnd: "2026-12-31T23:59:59.999Z"
+                            dailyStoreEnd: itemshopDate
                         }
                     }
                 ],
-                cacheExpire: "2026-12-31T23:59:59.999Z"
+                cacheExpire: itemshopDate
             }
         },
         eventsTimeOffsetHrs: 0,
