@@ -42,6 +42,7 @@ app.use(require("./src/routes/cloudstorage.js"));
 app.use(require("./src/routes/contentpages.js"));
 app.use(require("./src/routes/lightswitch.js"));
 app.use(require("./src/routes/mcp.js"));
+app.use(require("./src/routes/timeline.js"));
 app.use(require("./src/routes/version.js"));
 app.use(require("./src/routes/waitingroom.js"));
 
