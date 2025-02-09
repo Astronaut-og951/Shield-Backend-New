@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express.Router();
+const dotenv = require("dotenv");
 require('dotenv').config() // i think you only need this
 
 app.get("/fortnite/api/calendar/v1/timeline", (req, res) => {
