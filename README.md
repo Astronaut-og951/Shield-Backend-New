@@ -8,6 +8,10 @@ Welcome to the **Lexia Backend**! This project is open-source and a work in prog
 
 This is my first fully custom backend, and while it is not yet complete, I am actively working on improvements. The main purpose of releasing this backend is to allow others to use it, provide feedback, and contribute to its development.
 
+# Supported Seasons
+[-] Chapter 1 Season 1
+[-] Chapter 1 Season 2
+
 ## 📌 Roadmap
 
 ### Upcoming Features & Fixes:
@@ -23,9 +27,9 @@ And lots more
 
 ⚠ **Note:** The backend is still in early development, so functionality is limited.
 
-- **Lobby Access** *(50% Complete)* – Requires authentication to enter.
-- **Authentication** *(85% Complete)* - Requires commands now.
-- **MongoDB** *(100% Complete)* - Requires nothing more unless you want to mod it and make it better
+- **Lobby Access** - lobby is broken needs to be fixed
+- **Authentication** *(broken)* - needs to be fixed
+- **MongoDB** - Requires nothing more unless you want to mod it and make it better
 
 These are all of our features for now, We will add lots more as days and hours go by.
 
