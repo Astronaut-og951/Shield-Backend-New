@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express.Router();
-const functions = require("../structs/functions.js");
 const dotenv = require("dotenv");
 require("dotenv").config(); // think this is scuffed??? idk i dont use commonjs - nade
 
