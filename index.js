@@ -6,7 +6,7 @@ dotenv.config();
 const PORT = process.env.PORT || env.PORT; // 3551
 const mongoose = require('mongoose');
 const log = require("./src/utils/log/log.js");
-const bot = require("./src/bot/bot.js");
+const path = require("path");
 
 // middleware
 app.use(express.json());
@@ -36,15 +36,14 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use(require("./src/routes/keychain.js"));
-app.use(require("./src/routes/auth.js"))
-app.use(require("./src/routes/cloudstorage.js"));
-app.use(require("./src/routes/contentpages.js"));
-app.use(require("./src/routes/lightswitch.js"));
-app.use(require("./src/routes/mcp.js"));
-app.use(require("./src/routes/timeline.js"));
-app.use(require("./src/routes/version.js"));
-app.use(require("./src/routes/waitingroom.js"));
+
+fs.readdirSync(path.join(__dirname, "src", "routes")).forEach((file) => {
+    const routePath = path.join(__dirname, "src", "routes", file);
+    const route = require(routePath);
+  
+    app.use(route);
+    log.info(`Loaded ${file}!`)
+});
 
 function connectDB() {
     try {
