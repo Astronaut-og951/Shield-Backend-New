@@ -46,19 +46,6 @@ app.delete("/account/api/oauth/sessions/kill", (req, res) => {
 app.delete("/account/api/oauth/sessions/kill/:token", (req, res) => {
     res.status(200).send({ status: "OK", code: 200 });
 });
-app.get("/account/api/public/account", (req, res) => {
-    const accountId = req.query.accountId;
-    try {
-        //if (!accountId) return res.status(400).send({ error: "Account ID is required" });
-        res.status(200).send({
-            id: "fortnite",
-            displayName: "lexia",
-            email: "lexia@services.com"
-        });
-    } catch {
-        res.status(400).send({ error: "IDK ERRORED." });
-    }
-});
 app.get("/account/api/public/account/fortnite", (req, res) => {
     res.status(200).send({
         id: "fortnite",
@@ -66,20 +53,9 @@ app.get("/account/api/public/account/fortnite", (req, res) => {
         email: "lexia@services.com"
     });
 });
-app.get("/account/api/public/account/fortnite/externalAuths", (req, res) => {
-    res.status(200).send([]);
-});
-
 app.post("/fortnite/api/game/v2/tryPlayOnPlatform/account/:accountId", (req, res) => {
     	res.setHeader("Content-Type", "text/plain");
     res.status(200).send("true");
-});
-
-app.post("/datarouter/api/v1/public/data", (req, res) => {
-    res.status(200).send({
-    status: "OK",
-    code: 200
-    });
 });
 
 module.exports = app;
