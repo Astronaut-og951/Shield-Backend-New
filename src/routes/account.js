@@ -5,10 +5,6 @@ const account = require('../db/models/account');
 app.post("/datarouter/api/v1/public/data", async (req, res) => {
     res.status(204).end();
 });
-app.post('/fortnite/api/game/v2/tryPlayOnPlatform/account/:accountId', async (req, res) => {
-    res.setHeader("Content-Type", "text/plain");
-    res.send(true);
-})
 app.get('/account/api/public/account/*/externalAuths', async (req, res) => {
     res.json([]);
 })
@@ -21,19 +17,25 @@ app.get('/fortnite/api/game/v2/enabled_features', async (req, res) => {
 app.get('/content-controls/:accountId', async (req, res) => {
     res.status(200).send([]);
 })
-app.get('/account/api/public/account', async (req, res) => {
-    res.status(200).send({
-        id: "lexia", // account id of the player
-        displayName: "lexiabackend",
-        externalAuth: {}
-    });
-})
+app.get("/account/api/public/account", (req, res) => {
+    const accountId = req.query.accountId;
+    try {
+        //if (!accountId) return res.status(400).send({ error: "Account ID is required" });
+        res.status(200).send({
+            id: "fortnite",
+            displayName: "lexia",
+            email: "lexia@services.com"
+        });
+    } catch {
+        res.status(400).send({ error: "IDK ERRORED." });
+    }
+});
 app.get('/account/api/public/account/:accountId', async (req, res) => {
     res.status(200).send({
         id: "lexia", // account id of the player
         displayName: "lexiabackend",
         name: "lexiabackend",
-        email: "lexia@lexia.dev",
+        email: "lexia@services.com",
         failedLoginAttempts: 0,
         lastLogin: "Timestamp",
         numberOfDisplayNameChanges: 0,
