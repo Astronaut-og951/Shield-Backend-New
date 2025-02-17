@@ -49,7 +49,7 @@ app.delete("/account/api/oauth/sessions/kill/:token", (req, res) => {
 app.get("/account/api/public/account", (req, res) => {
     const accountId = req.query.accountId;
     try {
-        if (!accountId) return res.status(400).send({ error: "Account ID is required" });
+        //if (!accountId) return res.status(400).send({ error: "Account ID is required" });
         res.status(200).send({
             id: "fortnite",
             displayName: "lexia",
@@ -70,22 +70,16 @@ app.get("/account/api/public/account/fortnite/externalAuths", (req, res) => {
     res.status(200).send([]);
 });
 
-app.post("/fortnite/api/game/v2/tryPlayOnPlatform/account/fortnite", (req, res) => {
-    if (req.query.platform === "PC") {
-        res.status(200).send({ status: "success", platform: "PC" });
-    } else {
-        res.status(400).send({ error: "Invalid platform" });
-    }
+app.post("/fortnite/api/game/v2/tryPlayOnPlatform/account/:accountId", (req, res) => {
+    	res.setHeader("Content-Type", "text/plain");
+    res.status(200).send("true");
 });
 
 app.post("/datarouter/api/v1/public/data", (req, res) => {
-    res.status(200).send({ status: "success" });
+    res.status(200).send({
+    status: "OK",
+    code: 200
+    });
 });
-
-app.all("*", (req, res) => {
-    res.status(404).send({ error: "Endpoint not found" });
-});
-
-
 
 module.exports = app;
